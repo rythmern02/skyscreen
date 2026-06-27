@@ -55,7 +55,7 @@ function Panel({ i }: { i: number }) {
               {String(i + 1).padStart(2, "0")}
             </span>
           </div>
-          <h3 className="mt-8 font-display text-2xl tracking-tight text-white sm:text-3xl">
+          <h3 className="mt-8 font-display text-2xl tracking-tight text-fg sm:text-3xl">
             {cap.title}
           </h3>
           <p className="mt-3 max-w-md text-sm leading-relaxed text-haze/70">

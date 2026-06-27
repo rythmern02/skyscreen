@@ -36,21 +36,22 @@ export const CAPABILITIES: Capability[] = [
 export type ShowcaseItem = {
   id: string;
   index: string;
-  client: string;
   title: string;
+  line: string;
   category: string;
-  metric: string;
-  metricLabel: string;
+  spec: string;
+  specLabel: string;
   accent: string;
   img: string;
 };
 
+// Forward-looking use cases — what SkyScreen is built to do (not past work).
 export const SHOWCASE: ShowcaseItem[] = [
-  { id: "s1", index: "01", client: "Aurora Motors", title: "A skyline reveal for the EV of the year", category: "Automobile Launch", metric: "2.4M", metricLabel: "live impressions", accent: "#6ea8ff", img: "/images/auto.jpg" },
-  { id: "s2", index: "02", client: "Meridian Festival", title: "The headliner played to a sky that played back", category: "Concert", metric: "47", metricLabel: "minute aerial set", accent: "#b07bff", img: "/images/concert.jpg" },
-  { id: "s3", index: "03", client: "Coastal United", title: "Match day, lifted three hundred meters", category: "Sports", metric: "360°", metricLabel: "arena visibility", accent: "#58e0c0", img: "/images/arena.jpg" },
-  { id: "s4", index: "04", client: "House of Lune", title: "A proposal written across the night", category: "Wedding", metric: "1", metricLabel: "unforgettable yes", accent: "#ff9d4d", img: "/images/wedding.jpg" },
-  { id: "s5", index: "05", client: "Civic Forward", title: "A message that reached six districts by dusk", category: "Campaign", metric: "640k", metricLabel: "people reached", accent: "#6ea8ff", img: "/images/citynight.jpg" },
+  { id: "s1", index: "01", title: "Reveal it where the world looks up", line: "Drop a product into the skyline at the exact second of launch — a moment built to travel.", category: "Brand Launches", spec: "4K", specLabel: "live content", accent: "#6ea8ff", img: "/images/billboard.jpg" },
+  { id: "s2", index: "02", title: "Turn the night sky into the stage", line: "Extend a concert into the air with visuals synced to every beat of the set.", category: "Concerts", spec: "360°", specLabel: "visibility", accent: "#b07bff", img: "/images/ledfest.jpg" },
+  { id: "s3", index: "03", title: "Own the airspace above the arena", line: "Aerial replays, score takeovers and sponsor moments the whole crowd can see.", category: "Sports", spec: "500m+", specLabel: "viewing radius", accent: "#58e0c0", img: "/images/arena.jpg" },
+  { id: "s4", index: "04", title: "A reveal that floats above it all", line: "Lift a couple's story over the celebration for a moment no guest forgets.", category: "Weddings", spec: "Bespoke", specLabel: "every flight", accent: "#ff9d4d", img: "/images/wedding.jpg" },
+  { id: "s5", index: "05", title: "Cover a region in a single evening", line: "Move a message between districts in hours, updated live from the ground.", category: "Campaigns", spec: "Live", specLabel: "content updates", accent: "#6ea8ff", img: "/images/citynight.jpg" },
 ];
 
 export type GalleryItem = {
@@ -62,17 +63,18 @@ export type GalleryItem = {
   h: number;
 };
 
+// Illustrative imagery of the technology and the contexts it's built for.
 export const GALLERY: GalleryItem[] = [
-  { id: "g1", caption: "Skyline Reveal", place: "Manhattan", accent: "#6ea8ff", img: "/images/skyline.jpg", h: 440 },
-  { id: "g2", caption: "Night Concert", place: "Berlin", accent: "#b07bff", img: "/images/artist.jpg", h: 300 },
-  { id: "g3", caption: "Arena Takeover", place: "São Paulo", accent: "#58e0c0", img: "/images/arena2.jpg", h: 360 },
-  { id: "g4", caption: "Aerial Rig", place: "Field Test", accent: "#6ea8ff", img: "/images/drone-rig.jpg", h: 300 },
-  { id: "g5", caption: "Festival Mainstage", place: "Austin", accent: "#ff9d4d", img: "/images/festival.jpg", h: 460 },
-  { id: "g6", caption: "Civic Campaign", place: "Toronto", accent: "#58e0c0", img: "/images/city.jpg", h: 320 },
-  { id: "g7", caption: "Wedding Reveal", place: "Tuscany", accent: "#ff9d4d", img: "/images/wedding2.jpg", h: 360 },
-  { id: "g8", caption: "Brand Drop", place: "Crowd", accent: "#b07bff", img: "/images/crowd.jpg", h: 300 },
-  { id: "g9", caption: "Automobile Launch", place: "Coastline", accent: "#6ea8ff", img: "/images/auto2.jpg", h: 340 },
-  { id: "g10", caption: "Drone Survey", place: "Altitude", accent: "#58e0c0", img: "/images/drone-field.jpg", h: 380 },
+  { id: "g1", caption: "The LED Display", place: "Up close", accent: "#6ea8ff", img: "/images/ledpanel.jpg", h: 440 },
+  { id: "g2", caption: "Concert-scale", place: "Stage visuals", accent: "#b07bff", img: "/images/ledfest.jpg", h: 300 },
+  { id: "g3", caption: "Aerial Platform", place: "The drone rig", accent: "#58e0c0", img: "/images/drone-dark.jpg", h: 360 },
+  { id: "g4", caption: "Outdoor Advertising", place: "City-scale", accent: "#ff9d4d", img: "/images/billboard.jpg", h: 320 },
+  { id: "g5", caption: "Stadium Energy", place: "Live crowds", accent: "#6ea8ff", img: "/images/arena2.jpg", h: 460 },
+  { id: "g6", caption: "In The Clouds", place: "At altitude", accent: "#58e0c0", img: "/images/drone-clouds.jpg", h: 320 },
+  { id: "g7", caption: "Celebrations", place: "Personal moments", accent: "#ff9d4d", img: "/images/wedding2.jpg", h: 360 },
+  { id: "g8", caption: "Massive Displays", place: "Stage build", accent: "#b07bff", img: "/images/ledstage.jpg", h: 300 },
+  { id: "g9", caption: "Brand Launches", place: "Reveal moment", accent: "#6ea8ff", img: "/images/auto.jpg", h: 340 },
+  { id: "g10", caption: "Built To Fly", place: "Sky-ready", accent: "#58e0c0", img: "/images/drone-sky.jpg", h: 380 },
 ];
 
 export type TechPart = {
@@ -101,10 +103,10 @@ export type Stat = {
 };
 
 export const STATS: Stat[] = [
-  { value: 100000, suffix: "+", label: "Impressions per hour", prefix: "" },
-  { value: 500, suffix: "m+", label: "Visible viewing radius" },
+  { value: 100000, suffix: "+", label: "Reach potential per hour", prefix: "" },
+  { value: 500, suffix: "m+", label: "Engineered viewing radius" },
   { value: 360, suffix: "°", label: "Unobstructed visibility" },
-  { value: 99.9, suffix: "%", label: "Flight stabilization", decimals: 1 },
+  { value: 99.9, suffix: "%", label: "Target flight stabilization", decimals: 1 },
   { value: 4, suffix: "K", label: "Live content resolution" },
   { value: 0, suffix: "s", label: "Real-time content updates", prefix: "<1" },
 ];
@@ -148,19 +150,6 @@ export const PROCESS: ProcessStep[] = [
   { no: "05", title: "Deployment", detail: "Crews stage on site; the mesh calibrates and rehearses the full show." },
   { no: "06", title: "Launch", detail: "The screen lifts. Your moment takes the sky, live and synchronized." },
   { no: "07", title: "Delivery", detail: "Capture, analytics and broadcast-grade footage delivered to your team." },
-];
-
-export type Testimonial = {
-  quote: string;
-  name: string;
-  role: string;
-};
-
-export const TESTIMONIALS: Testimonial[] = [
-  { quote: "We didn't buy media. We bought the entire skyline for ninety seconds and the city stopped to look.", name: "Elena Vasquez", role: "CMO, Aurora Motors" },
-  { quote: "Nothing in our playbook has ever produced reach like this. It felt less like advertising and more like an event.", name: "Marcus Bennett", role: "Head of Brand, Meridian" },
-  { quote: "The stabilization is uncanny — from the ground it reads like a screen that simply decided to float.", name: "Priya Nair", role: "Executive Producer, Coastal Live" },
-  { quote: "Our campaign reached districts in a single evening that posters wouldn't have touched in a month.", name: "Daniel Cole", role: "Director, Civic Forward" },
 ];
 
 export type Faq = { q: string; a: string };

@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative h-[100svh] min-h-[640px] w-full overflow-hidden"
+      className="force-dark relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-void"
     >
       {/* 3D stage */}
       <div className="absolute inset-0">
@@ -24,7 +24,8 @@ export function Hero() {
 
       {/* readability scrims */}
       <div className="scrim-top pointer-events-none absolute inset-x-0 top-0 h-40" />
-      <div className="scrim-bottom pointer-events-none absolute inset-x-0 bottom-0 h-64" />
+      <div className="scrim-bottom pointer-events-none absolute inset-x-0 bottom-0 h-[70vh]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(90%_70%_at_15%_85%,rgba(5,5,5,0.78),transparent_60%)]" />
 
       {/* copy */}
       <div className="pointer-events-none relative z-10 flex h-full flex-col justify-end pb-[8vh] sm:pb-[10vh]">
@@ -61,12 +62,12 @@ export function Hero() {
             className="pointer-events-auto mt-9 flex flex-wrap items-center gap-4"
           >
             <MagneticButton href="#contact" variant="primary">
-              Book a Demo
+              Book Now
               <Arrow />
             </MagneticButton>
             <MagneticButton href="#showcase" variant="ghost">
               <PlayDot />
-              Watch SkyScreen in Action
+              See How It Works
             </MagneticButton>
           </motion.div>
         </div>

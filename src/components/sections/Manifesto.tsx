@@ -34,7 +34,7 @@ export function Manifesto() {
   return (
     <section className="relative py-28 sm:py-40">
       <div className="shell">
-        <p ref={ref} className="mx-auto max-w-5xl text-center font-display text-3xl leading-[1.2] tracking-tight text-white sm:text-5xl sm:leading-[1.18]">
+        <p ref={ref} className="mx-auto max-w-5xl text-center font-display text-3xl leading-[1.2] tracking-tight text-fg sm:text-5xl sm:leading-[1.18]">
           {words.map((w, i) => {
             const start = i / words.length;
             const end = start + 1 / words.length;

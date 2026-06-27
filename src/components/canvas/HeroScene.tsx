@@ -32,16 +32,18 @@ function CameraRig({ flyGroup }: { flyGroup: React.RefObject<THREE.Group | null>
 
     const tx = Math.sin(angle) * radius;
     const tz = Math.cos(angle) * radius;
-    const ty = 0.45 + py.current * 0.5 + p * 1.4;
+    // sit the camera higher and aim downward so the screen rides the upper
+    // frame, leaving the lower-left clear for the headline
+    const ty = 1.5 + py.current * 0.5 + p * 1.8;
 
     camera.position.x = lerp(camera.position.x, tx, 0.05);
     camera.position.y = lerp(camera.position.y, ty, 0.05);
     camera.position.z = lerp(camera.position.z, tz, 0.05);
-    camera.lookAt(0, 0.2 + p * 0.6, 0);
+    camera.lookAt(0, -0.85 + p * 0.5, 0);
 
     // the rig "flies upward" and fades as we scroll past the hero
     if (flyGroup.current) {
-      flyGroup.current.position.y = p * 4.5;
+      flyGroup.current.position.y = 0.6 + p * 4.5;
       const s = 1 - p * 0.15;
       flyGroup.current.scale.setScalar(s);
     }

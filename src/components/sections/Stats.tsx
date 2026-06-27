@@ -15,9 +15,9 @@ export function Stats() {
         <SectionHeader
           index="05"
           eyebrow="Why SkyScreen"
-          title="Numbers that only make sense in the air."
+          title="Engineered to dominate the sky."
           align="center"
-          intro="An aerial billboard rewrites the maths of attention. Here is what a single SkyScreen deployment puts in play."
+          intro="Every figure below is a capability the platform is built to deliver — the case for putting your message in the air."
         />
 
         <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-line bg-line lg:grid-cols-3">
@@ -27,7 +27,7 @@ export function Stats() {
               delay={(i % 3) * 0.08}
               className="group relative bg-ink/80 p-8 transition-colors duration-500 hover:bg-coal sm:p-10"
             >
-              <div className="flex items-baseline font-display text-5xl tracking-tight text-white sm:text-6xl">
+              <div className="flex items-baseline font-display text-5xl tracking-tight text-fg sm:text-6xl">
                 {s.prefix ? <span>{s.prefix}</span> : null}
                 <CountUp value={s.value} decimals={s.decimals ?? 0} />
                 <span className="text-sky-glow">{s.suffix}</span>

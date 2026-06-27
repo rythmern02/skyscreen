@@ -94,8 +94,16 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${sora.variable}`}>
-      <body className="grain bg-void text-[#f4f5f7] antialiased">
+    <html lang="en" className={`${inter.variable} ${sora.variable}`} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var p=new URLSearchParams(location.search).get('theme');var t=p||localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.add('light');}if(p){localStorage.setItem('theme',p);}}catch(e){}})();",
+          }}
+        />
+      </head>
+      <body className="grain bg-void text-fg antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

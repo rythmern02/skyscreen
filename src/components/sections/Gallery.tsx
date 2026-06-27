@@ -12,7 +12,12 @@ export function Gallery() {
   return (
     <section className="relative py-28 sm:py-36">
       <div className="shell">
-        <SectionHeader index="08" eyebrow="Gallery" title="A field guide to the sky we've lit." />
+        <SectionHeader
+          index="08"
+          eyebrow="The Medium"
+          title="The display, the rig, and the moments it's for."
+          intro="Illustrative imagery of the technology and the contexts SkyScreen is built to light up."
+        />
 
         <div className="mt-16 [column-fill:_balance] gap-5 sm:columns-2 lg:columns-3">
           {GALLERY.map((tile, i) => (

@@ -41,7 +41,7 @@ export function Technology() {
               <span className="font-display text-xs text-faint">
                 {String(active + 1).padStart(2, "0")} / {String(TECH_PARTS.length).padStart(2, "0")}
               </span>
-              <p className="font-display text-lg text-white">{TECH_PARTS[active].title}</p>
+              <p className="font-display text-lg text-fg">{TECH_PARTS[active].title}</p>
             </div>
           </motion.div>
         </div>
@@ -65,7 +65,7 @@ export function Technology() {
                   <span className="font-display text-sm text-sky-glow/70">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="font-display text-2xl tracking-tight text-white sm:text-3xl">
+                  <h3 className="font-display text-2xl tracking-tight text-fg sm:text-3xl">
                     {part.title}
                   </h3>
                 </div>

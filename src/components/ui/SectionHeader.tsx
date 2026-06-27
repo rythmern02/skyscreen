@@ -35,7 +35,7 @@ export function SectionHeader({
       </Reveal>
       <h2
         className={cn(
-          "display-lg max-w-4xl text-balance text-white",
+          "display-lg max-w-4xl text-balance text-fg",
           align === "center" && "mx-auto",
         )}
       >

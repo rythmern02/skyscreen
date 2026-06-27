@@ -32,7 +32,7 @@ function Field({
         required={required}
         placeholder={placeholder}
         data-cursor
-        className="w-full border-b border-line bg-transparent pb-2.5 text-base text-white outline-none transition-colors placeholder:text-faint focus:border-sky-glow [color-scheme:dark]"
+        className="w-full border-b border-line bg-transparent pb-2.5 text-base text-fg outline-none transition-colors placeholder:text-faint focus:border-sky-glow [color-scheme:dark]"
       />
     </label>
   );
@@ -64,7 +64,7 @@ export function Contact() {
               <span className="eyebrow">Contact · 11</span>
             </Reveal>
             <Reveal delay={0.05}>
-              <h2 className="display-lg mt-5 text-balance text-white">
+              <h2 className="display-lg mt-5 text-balance text-fg">
                 Let&apos;s put your moment in the sky.
               </h2>
             </Reveal>
@@ -116,7 +116,7 @@ export function Contact() {
                           onClick={() => setOpenSelect((v) => !v)}
                           className="flex w-full items-center justify-between border-b border-line bg-transparent pb-2.5 text-left text-base outline-none transition-colors focus:border-sky-glow"
                         >
-                          <span className={purpose ? "text-white" : "text-faint"}>
+                          <span className={purpose ? "text-fg" : "text-faint"}>
                             {purpose || "Select purpose"}
                           </span>
                           <span className={`text-mute transition-transform ${openSelect ? "rotate-180" : ""}`}>⌄</span>
@@ -140,7 +140,7 @@ export function Contact() {
                                       setPurpose(opt);
                                       setOpenSelect(false);
                                     }}
-                                    className="w-full px-4 py-2.5 text-left text-sm text-haze/80 transition-colors hover:bg-white/5 hover:text-white"
+                                    className="w-full px-4 py-2.5 text-left text-sm text-haze/80 transition-colors hover:bg-white/5 hover:text-fg"
                                   >
                                     {opt}
                                   </button>
@@ -159,7 +159,7 @@ export function Contact() {
                         rows={3}
                         data-cursor
                         placeholder="Tell us about the moment you want to own…"
-                        className="w-full resize-none border-b border-line bg-transparent pb-2.5 text-base text-white outline-none transition-colors placeholder:text-faint focus:border-sky-glow"
+                        className="w-full resize-none border-b border-line bg-transparent pb-2.5 text-base text-fg outline-none transition-colors placeholder:text-faint focus:border-sky-glow"
                       />
                     </label>
 
@@ -221,7 +221,7 @@ function Success({ onReset }: { onReset: () => void }) {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="mt-4 font-display text-3xl tracking-tight text-white"
+        className="mt-4 font-display text-3xl tracking-tight text-fg"
       >
         Cleared for takeoff.
       </motion.h3>
@@ -237,7 +237,7 @@ function Success({ onReset }: { onReset: () => void }) {
       <button
         data-cursor
         onClick={onReset}
-        className="mt-8 text-sm text-sky-glow/80 underline-offset-4 transition-colors hover:text-white hover:underline"
+        className="mt-8 text-sm text-sky-glow/80 underline-offset-4 transition-colors hover:text-fg hover:underline"
       >
         Submit another request
       </button>

@@ -10,7 +10,6 @@ import { Stats } from "@/components/sections/Stats";
 import { Industries } from "@/components/sections/Industries";
 import { Process } from "@/components/sections/Process";
 import { Gallery } from "@/components/sections/Gallery";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
@@ -31,7 +30,6 @@ export default function Home() {
         <Industries />
         <Process />
         <Gallery />
-        <Testimonials />
         <Faq />
         <Contact />
       </main>

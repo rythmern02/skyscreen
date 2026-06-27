@@ -29,10 +29,9 @@ export function MagneticButton({
   const base =
     "group relative inline-flex items-center justify-center gap-2.5 overflow-hidden rounded-full px-7 py-3.5 text-sm font-medium tracking-tight transition-colors will-change-transform select-none";
   const styles: Record<Variant, string> = {
-    primary:
-      "bg-white text-black hover:text-black",
+    primary: "bg-fg text-void",
     ghost:
-      "border border-line-strong bg-white/[0.02] text-white/85 hover:text-white",
+      "border border-line-strong bg-white/[0.02] text-fg/85 hover:text-fg",
   };
 
   const inner = (

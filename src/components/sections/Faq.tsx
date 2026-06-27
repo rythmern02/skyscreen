@@ -36,12 +36,12 @@ export function Faq() {
                       className="group flex w-full items-center justify-between gap-6 py-7 text-left"
                       aria-expanded={isOpen}
                     >
-                      <span className="font-display text-xl tracking-tight text-white/90 transition-colors group-hover:text-white sm:text-2xl">
+                      <span className="font-display text-xl tracking-tight text-fg/90 transition-colors group-hover:text-fg sm:text-2xl">
                         {item.q}
                       </span>
                       <span className="relative flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line">
-                        <span className="absolute h-3 w-px bg-white/70 transition-transform duration-300" style={{ transform: isOpen ? "rotate(90deg)" : "none" }} />
-                        <span className="h-px w-3 bg-white/70" />
+                        <span className="absolute h-3 w-px bg-fg/70 transition-transform duration-300" style={{ transform: isOpen ? "rotate(90deg)" : "none" }} />
+                        <span className="h-px w-3 bg-fg/70" />
                       </span>
                     </button>
                     <AnimatePresence initial={false}>

@@ -17,7 +17,7 @@ function Slide({ item, priority }: { item: ShowcaseItem; priority?: boolean }) {
       <div className="absolute inset-0 overflow-hidden">
         <Image
           src={item.img}
-          alt={`${item.client} — ${item.category}`}
+          alt={`${item.category} — ${item.title}`}
           fill
           sizes="(max-width: 640px) 82vw, (max-width: 1024px) 64vw, 46vw"
           priority={priority}
@@ -42,11 +42,11 @@ function Slide({ item, priority }: { item: ShowcaseItem; priority?: boolean }) {
         <h3 className="mt-3 max-w-md font-display text-2xl tracking-tight text-white sm:text-3xl">
           {item.title}
         </h3>
-        <div className="mt-6 flex items-end justify-between">
-          <span className="text-sm text-haze/70">{item.client}</span>
-          <div className="text-right">
-            <div className="font-display text-3xl text-white">{item.metric}</div>
-            <div className="text-[11px] uppercase tracking-wider text-mute">{item.metricLabel}</div>
+        <div className="mt-5 flex items-end justify-between gap-6">
+          <p className="max-w-xs text-sm leading-relaxed text-haze/80">{item.line}</p>
+          <div className="shrink-0 text-right">
+            <div className="font-display text-2xl text-white sm:text-3xl">{item.spec}</div>
+            <div className="text-[11px] uppercase tracking-wider text-mute">{item.specLabel}</div>
           </div>
         </div>
       </div>
@@ -79,8 +79,9 @@ export function Showcase() {
           <div className="shell shrink-0 pb-10 pt-24">
             <SectionHeader
               index="02"
-              eyebrow="Showcase"
-              title="Moments the whole city looked up for."
+              eyebrow="Use Cases"
+              title="Built for your biggest moment."
+              intro="We're a new kind of medium — here's what SkyScreen is engineered to do for brands, artists and events."
             />
           </div>
           <motion.div
@@ -94,8 +95,8 @@ export function Showcase() {
             {/* closing card */}
             <div className="flex h-full w-[60vw] shrink-0 items-center justify-center rounded-3xl border border-dashed border-line sm:w-[40vw] lg:w-[28vw]">
               <div className="text-center">
-                <p className="font-display text-2xl text-white">Your campaign</p>
-                <p className="mt-2 text-sm text-mute">is the next case study.</p>
+                <p className="font-display text-2xl text-fg">Your campaign</p>
+                <p className="mt-2 text-sm text-mute">could be the first we fly.</p>
               </div>
             </div>
           </motion.div>

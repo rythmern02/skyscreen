@@ -92,20 +92,20 @@ export function Industries() {
                   className="absolute left-0 top-0 flex h-[200px] w-[300px] flex-col justify-end rounded-2xl border p-7 transition-[opacity,border-color,background] duration-500"
                   style={{
                     transform: `rotateY(${i * STEP}deg) translateZ(${RADIUS}px)`,
-                    borderColor: isFront ? "rgba(110,168,255,0.5)" : "rgba(255,255,255,0.08)",
+                    borderColor: isFront ? "rgba(110,168,255,0.6)" : "rgba(140,150,170,0.25)",
                     background: isFront
-                      ? "linear-gradient(160deg, rgba(47,123,255,0.16), rgba(255,255,255,0.02))"
-                      : "rgba(9,9,9,0.6)",
-                    opacity: isFront ? 1 : 0.5,
+                      ? "linear-gradient(160deg, rgba(33,82,196,0.92), rgba(47,123,255,0.45))"
+                      : "rgba(14,16,22,0.72)",
+                    opacity: isFront ? 1 : 0.45,
                     backdropFilter: "blur(12px)",
-                    boxShadow: isFront ? "0 30px 80px -30px rgba(47,123,255,0.6)" : "none",
+                    boxShadow: isFront ? "0 30px 80px -30px rgba(47,123,255,0.7)" : "none",
                   }}
                 >
-                  <span className="font-display text-xs text-sky-glow/70">
+                  <span className="font-display text-xs text-white/70">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="mt-2 font-display text-2xl tracking-tight text-white">{ind.name}</h3>
-                  <p className="mt-2 text-sm text-haze/70">{ind.line}</p>
+                  <p className="mt-2 text-sm text-white/75">{ind.line}</p>
                 </div>
               );
             })}

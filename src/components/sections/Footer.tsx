@@ -39,7 +39,7 @@ export function Footer() {
                   href={l.href}
                   data-cursor
                   onClick={(e) => go(e, l.href)}
-                  className="text-sm text-haze/70 transition-colors hover:text-white"
+                  className="text-sm text-haze/70 transition-colors hover:text-fg"
                 >
                   {l.label}
                 </a>
@@ -54,7 +54,7 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   data-cursor
-                  className="text-sm text-haze/70 transition-colors hover:text-white"
+                  className="text-sm text-haze/70 transition-colors hover:text-fg"
                 >
                   {s.label}
                 </a>
@@ -62,10 +62,10 @@ export function Footer() {
             </nav>
             <nav className="flex flex-col gap-3">
               <span className="eyebrow mb-1">Contact</span>
-              <a href="mailto:fly@skyscreen.aero" data-cursor className="text-sm text-haze/70 transition-colors hover:text-white">
+              <a href="mailto:fly@skyscreen.aero" data-cursor className="text-sm text-haze/70 transition-colors hover:text-fg">
                 fly@skyscreen.aero
               </a>
-              <a href="tel:+10000000000" data-cursor className="text-sm text-haze/70 transition-colors hover:text-white">
+              <a href="tel:+10000000000" data-cursor className="text-sm text-haze/70 transition-colors hover:text-fg">
                 +1 (000) 000-0000
               </a>
               <span className="text-sm text-haze/40">Operating worldwide</span>
@@ -75,7 +75,7 @@ export function Footer() {
 
         {/* giant wordmark */}
         <div className="relative select-none border-t border-line py-10">
-          <h2 className="display-xl whitespace-nowrap text-center text-white/[0.04]">
+          <h2 className="display-xl whitespace-nowrap text-center text-fg/[0.04]">
             <AnimatedText text="SKYSCREEN" stagger={0.02} />
           </h2>
         </div>
@@ -83,9 +83,9 @@ export function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 border-t border-line py-8 text-xs text-mute sm:flex-row">
           <p>© {new Date().getFullYear()} SkyScreen. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" data-cursor className="transition-colors hover:text-white">Privacy</a>
-            <a href="#" data-cursor className="transition-colors hover:text-white">Terms</a>
-            <a href="#" data-cursor className="transition-colors hover:text-white">Safety</a>
+            <a href="#" data-cursor className="transition-colors hover:text-fg">Privacy</a>
+            <a href="#" data-cursor className="transition-colors hover:text-fg">Terms</a>
+            <a href="#" data-cursor className="transition-colors hover:text-fg">Safety</a>
           </div>
         </div>
       </div>

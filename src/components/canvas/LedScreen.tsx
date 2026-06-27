@@ -56,13 +56,17 @@ function drawAd(ctx: CanvasRenderingContext2D, t: number) {
   ctx.fillText("LIVE", 20, 1);
   ctx.restore();
 
-  // wordmark
+  // wordmark — cool gradient fill so it reads as screen content, not headline
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillStyle = "#ffffff";
-  ctx.font = "700 96px Sora, Inter, Arial, sans-serif";
+  const wm = ctx.createLinearGradient(W / 2 - 240, 0, W / 2 + 240, 0);
+  wm.addColorStop(0, "#cfe0ff");
+  wm.addColorStop(0.5, "#7fb0ff");
+  wm.addColorStop(1, "#9c8bff");
+  ctx.fillStyle = wm;
+  ctx.font = "700 86px Sora, Inter, Arial, sans-serif";
   ctx.shadowColor = "rgba(110,168,255,0.9)";
-  ctx.shadowBlur = 38;
+  ctx.shadowBlur = 34;
   ctx.fillText("SKYSCREEN", W / 2, H / 2 - 26);
   ctx.shadowBlur = 0;
 

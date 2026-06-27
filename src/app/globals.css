@@ -6,17 +6,21 @@
 /* ------------------------------------------------------------------ */
 
 @theme {
-  --color-void: #050505;
-  --color-ink: #090909;
-  --color-coal: #111111;
-  --color-slate-1: #171717;
-  --color-line: rgba(255, 255, 255, 0.08);
-  --color-line-strong: rgba(255, 255, 255, 0.16);
+  /* surface + text tokens point at theme variables so every utility
+     (bg-void, text-haze, border-line, text-fg…) flips with the theme */
+  --color-void: var(--bg-1);
+  --color-ink: var(--bg-2);
+  --color-coal: var(--bg-3);
+  --color-slate-1: var(--bg-4);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
 
-  --color-haze: #b8bcc4;
-  --color-mute: #6c7079;
-  --color-faint: #44474e;
+  --color-fg: var(--text-1);
+  --color-haze: var(--text-2);
+  --color-mute: var(--text-3);
+  --color-faint: var(--text-4);
 
+  /* accents stay constant across themes */
   --color-sky-glow: #6ea8ff;
   --color-sky-core: #2f7bff;
   --color-amber: #ff9d4d;
@@ -29,9 +33,46 @@
   --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-:root {
-  --bg: #050505;
-  color-scheme: dark;
+/* ---- Dark theme (default) ---- */
+:root,
+.force-dark {
+  --bg-1: #050505;
+  --bg-2: #090909;
+  --bg-3: #111111;
+  --bg-4: #171717;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --text-1: #f4f5f7;
+  --text-2: #b8bcc4;
+  --text-3: #6c7079;
+  --text-4: #44474e;
+  --glass-a: rgba(255, 255, 255, 0.055);
+  --glass-b: rgba(255, 255, 255, 0.015);
+  --glass-c: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --bg: var(--bg-1);
+}
+
+:root { color-scheme: dark; }
+
+/* ---- Light theme ---- */
+html.light {
+  --bg-1: #eef1f6;
+  --bg-2: #ffffff;
+  --bg-3: #e6e9f0;
+  --bg-4: #dce0e9;
+  --border: rgba(12, 14, 22, 0.10);
+  --border-strong: rgba(12, 14, 22, 0.20);
+  --text-1: #0b0d13;
+  --text-2: #44495a;
+  --text-3: #6b7180;
+  --text-4: #9aa0ad;
+  --glass-a: rgba(255, 255, 255, 0.75);
+  --glass-b: rgba(255, 255, 255, 0.35);
+  --glass-c: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(12, 14, 22, 0.10);
+  --bg: var(--bg-1);
+  color-scheme: light;
 }
 
 * {
@@ -42,8 +83,9 @@
 
 html {
   background: var(--bg);
-  color: #f4f5f7;
+  color: var(--text-1);
   scroll-behavior: auto;
+  transition: background-color 0.5s var(--ease-out-expo);
 }
 
 body {
@@ -128,11 +170,11 @@ html.lenis body {
 .glass {
   background: linear-gradient(
     160deg,
-    rgba(255, 255, 255, 0.055),
-    rgba(255, 255, 255, 0.015) 45%,
-    rgba(255, 255, 255, 0.04)
+    var(--glass-a),
+    var(--glass-b) 45%,
+    var(--glass-c)
   );
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--glass-border);
   backdrop-filter: blur(22px) saturate(120%);
   -webkit-backdrop-filter: blur(22px) saturate(120%);
 }
