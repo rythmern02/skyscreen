@@ -72,7 +72,7 @@ export const GALLERY: GalleryItem[] = [
   { id: "g5", caption: "Stadium Energy", place: "Live crowds", accent: "#6ea8ff", img: "/images/arena2.jpg", h: 460 },
   { id: "g6", caption: "In The Clouds", place: "At altitude", accent: "#58e0c0", img: "/images/drone-clouds.jpg", h: 320 },
   { id: "g7", caption: "Celebrations", place: "Personal moments", accent: "#ff9d4d", img: "/images/skyscreen_wedding_1782918646023.jpg", h: 360 },
-  { id: "g8", caption: "Massive Displays", place: "Stage build", accent: "#b07bff", img: "/images/skyscreen_festival_1782918623917.jpg", h: 300 },
+  { id: "g8", caption: "Massive Displays", place: "Stage build", accent: "#b07bff", img: "/images/skyscreen_massive_display_1782927585353.jpg", h: 300 },
   { id: "g9", caption: "Brand Launches", place: "Reveal moment", accent: "#6ea8ff", img: "/images/auto.jpg", h: 340 },
   { id: "g10", caption: "Built To Fly", place: "Sky-ready", accent: "#58e0c0", img: "/images/skyscreen_drone_city_1782918636366.jpg", h: 380 },
 ];
