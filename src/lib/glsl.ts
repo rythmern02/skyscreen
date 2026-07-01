@@ -1,4 +1,4 @@
-/** Reusable GLSL chunks — value-noise + fbm + hash. */
+/** Reusable GLSL chunks - value-noise + fbm + hash. */
 export const NOISE = /* glsl */ `
   float hash21(vec2 p){
     p = fract(p * vec2(123.34, 456.21));

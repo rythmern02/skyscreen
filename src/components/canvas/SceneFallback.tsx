@@ -5,7 +5,7 @@ export function SceneFallback() {
   return (
     <div className="absolute inset-0 overflow-hidden bg-void">
       <Image
-        src="/images/festival.jpg"
+        src="/images/skyscreen_festival_1782918623917.jpg"
         alt="A live event lit by giant screens at night"
         fill
         priority

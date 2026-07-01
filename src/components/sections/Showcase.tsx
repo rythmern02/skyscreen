@@ -17,7 +17,7 @@ function Slide({ item, priority }: { item: ShowcaseItem; priority?: boolean }) {
       <div className="absolute inset-0 overflow-hidden">
         <Image
           src={item.img}
-          alt={`${item.category} — ${item.title}`}
+          alt={`${item.category} - ${item.title}`}
           fill
           sizes="(max-width: 640px) 82vw, (max-width: 1024px) 64vw, 46vw"
           priority={priority}
@@ -81,7 +81,7 @@ export function Showcase() {
               index="02"
               eyebrow="Use Cases"
               title="Built for your biggest moment."
-              intro="We're a new kind of medium — here's what SkyScreen is engineered to do for brands, artists and events."
+              intro="We're a new kind of medium - here's what SkyScreen is engineered to do for brands, artists and events."
             />
           </div>
           <motion.div

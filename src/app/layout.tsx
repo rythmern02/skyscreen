@@ -29,11 +29,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: "SkyScreen — Advertising Has Left The Ground",
+    default: "SkyScreen - Advertising Has Left The Ground",
     template: "%s · SkyScreen",
   },
   description:
-    "SkyScreen flies a massive drone-suspended LED screen into the night sky — broadcasting live video, advertising and immersive aerial experiences visible from hundreds of meters.",
+    "SkyScreen flies a massive drone-suspended LED screen into the night sky - broadcasting live video, advertising and immersive aerial experiences visible from hundreds of meters.",
   keywords: [
     "drone LED screen",
     "aerial advertising",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE,
-    title: "SkyScreen — Advertising Has Left The Ground",
+    title: "SkyScreen - Advertising Has Left The Ground",
     description:
       "A massive flying LED screen carried by autonomous drones. Transform the sky into the world's most unforgettable billboard.",
     siteName: "SkyScreen",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SkyScreen — Advertising Has Left The Ground",
+    title: "SkyScreen - Advertising Has Left The Ground",
     description:
       "A massive flying LED screen carried by autonomous drones. The sky is the new billboard.",
     images: ["/og.svg"],

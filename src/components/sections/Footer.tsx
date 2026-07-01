@@ -1,93 +1,67 @@
 "use client";
 
-import { NAV_LINKS } from "@/lib/data";
 import { Logo } from "@/components/ui/Logo";
-import { AnimatedText } from "@/components/ui/Reveal";
-
-const SOCIALS = [
-  { label: "Instagram", href: "https://instagram.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "YouTube", href: "https://youtube.com" },
-  { label: "X", href: "https://x.com" },
-];
 
 export function Footer() {
-  const go = (e: React.MouseEvent, href: string) => {
-    if (!href.startsWith("#")) return;
-    e.preventDefault();
-    (window as unknown as { __lenis?: { scrollTo: (t: string) => void } }).__lenis?.scrollTo(href);
-  };
-
   return (
-    <footer className="relative overflow-hidden border-t border-line pt-24">
-      <div className="shell">
-        <div className="flex flex-col gap-12 pb-16 lg:flex-row lg:justify-between">
-          <div className="max-w-sm">
-            <Logo />
-            <p className="mt-6 text-pretty text-sm leading-relaxed text-haze/60">
-              Pioneering the future of aerial advertising — a massive flying LED
-              screen that turns the open sky into a living canvas.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-12 sm:grid-cols-3">
-            <nav className="flex flex-col gap-3">
-              <span className="eyebrow mb-1">Explore</span>
-              {NAV_LINKS.map((l) => (
-                <a
-                  key={l.href}
-                  href={l.href}
-                  data-cursor
-                  onClick={(e) => go(e, l.href)}
-                  className="text-sm text-haze/70 transition-colors hover:text-fg"
-                >
-                  {l.label}
-                </a>
-              ))}
-            </nav>
-            <nav className="flex flex-col gap-3">
-              <span className="eyebrow mb-1">Social</span>
-              {SOCIALS.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  data-cursor
-                  className="text-sm text-haze/70 transition-colors hover:text-fg"
-                >
-                  {s.label}
-                </a>
-              ))}
-            </nav>
-            <nav className="flex flex-col gap-3">
-              <span className="eyebrow mb-1">Contact</span>
-              <a href="mailto:fly@skyscreen.aero" data-cursor className="text-sm text-haze/70 transition-colors hover:text-fg">
-                fly@skyscreen.aero
-              </a>
-              <a href="tel:+10000000000" data-cursor className="text-sm text-haze/70 transition-colors hover:text-fg">
-                +1 (000) 000-0000
-              </a>
-              <span className="text-sm text-haze/40">Operating worldwide</span>
-            </nav>
-          </div>
+    <footer className="relative overflow-hidden pt-12">
+      <div className="shell flex flex-col items-center justify-between gap-8 pb-8 md:flex-row md:gap-0">
+        <div className="flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.2em] text-haze/40">
+          <span>© {new Date().getFullYear()} SkyScreen</span>
+          <span>·</span>
+          <span>All Rights Reserved</span>
         </div>
 
-        {/* giant wordmark */}
-        <div className="relative select-none border-t border-line py-10">
-          <h2 className="display-xl whitespace-nowrap text-center text-fg/[0.04]">
-            <AnimatedText text="SKYSCREEN" stagger={0.02} />
-          </h2>
+        <div className="flex flex-wrap justify-center gap-3 text-[10px] uppercase tracking-[0.15em] text-haze/60">
+          <a 
+            href="mailto:rajeevkalra1000@gmail.com" 
+            data-cursor 
+            className="rounded-full border border-white/10 px-6 py-2.5 transition-colors hover:bg-white hover:text-black"
+          >
+            rajeevkalra1000@gmail.com
+          </a>
+          <a 
+            href="tel:6261076025" 
+            data-cursor 
+            className="rounded-full border border-white/10 px-6 py-2.5 transition-colors hover:bg-white hover:text-black"
+          >
+            6261076025
+          </a>
+          <a 
+            href="https://instagram.com" 
+            target="_blank" 
+            rel="noreferrer" 
+            data-cursor 
+            className="rounded-full border border-white/10 px-6 py-2.5 transition-colors hover:bg-white hover:text-black"
+          >
+            Instagram
+          </a>
         </div>
+      </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-line py-8 text-xs text-mute sm:flex-row">
-          <p>© {new Date().getFullYear()} SkyScreen. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" data-cursor className="transition-colors hover:text-fg">Privacy</a>
-            <a href="#" data-cursor className="transition-colors hover:text-fg">Terms</a>
-            <a href="#" data-cursor className="transition-colors hover:text-fg">Safety</a>
-          </div>
-        </div>
+      {/* giant wordmark - scalable SVG to guarantee full width */}
+      <div className="relative w-full select-none overflow-hidden border-t border-line pt-6">
+        <svg viewBox="0 0 1000 200" className="h-auto w-full" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+              <stop offset="50%" stopColor="#ffffff" stopOpacity="0.7" />
+              <stop offset="100%" stopColor="#050505" stopOpacity="1" />
+            </linearGradient>
+          </defs>
+          <text 
+            x="50%" 
+            y="70%" 
+            dominantBaseline="middle"
+            textAnchor="middle" 
+            fill="url(#skyGradient)" 
+            className="font-sans font-thin" 
+            fontSize="180" 
+            letterSpacing="-3"
+          >
+            SKYSCREEN
+          </text>
+        </svg>
       </div>
     </footer>
   );

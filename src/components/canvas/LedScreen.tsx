@@ -56,7 +56,7 @@ function drawAd(ctx: CanvasRenderingContext2D, t: number) {
   ctx.fillText("LIVE", 20, 1);
   ctx.restore();
 
-  // wordmark — cool gradient fill so it reads as screen content, not headline
+  // wordmark - cool gradient fill so it reads as screen content, not headline
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   const wm = ctx.createLinearGradient(W / 2 - 240, 0, W / 2 + 240, 0);
@@ -115,7 +115,7 @@ const fragment = /* glsl */ `
     vec2 uv = vUv;
     vec3 col = texture2D(uMap, uv).rgb;
 
-    // LED pixel grid — round emitters with dark gaps
+    // LED pixel grid - round emitters with dark gaps
     vec2 cells = vec2(200.0, 112.0);
     vec2 g = fract(uv * cells) - 0.5;
     float d = length(g);

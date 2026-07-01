@@ -78,12 +78,12 @@ export function WhatIs() {
               index="01"
               eyebrow="What is SkyScreen"
               title="One platform. The entire sky as your canvas."
-              intro="SkyScreen is not a drone light show. It is a real, massive LED display flown into the air — capable of broadcasting video, advertising and live experiences to everyone below."
+              intro="SkyScreen is not a drone light show. It is a real, massive LED display flown into the air - capable of broadcasting video, advertising and live experiences to everyone below."
             />
           </div>
           <Reveal className="lg:col-span-4 lg:pb-2">
             <p className="text-sm leading-relaxed text-haze/60">
-              Eleven ways to put a living image into the sky — each engineered for
+              Eleven ways to put a living image into the sky - each engineered for
               altitude, legibility and the kind of attention nothing on the ground
               can buy.
             </p>

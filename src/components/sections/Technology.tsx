@@ -23,12 +23,12 @@ export function Technology() {
           index="04"
           eyebrow="The Technology"
           title="Eight systems. One impossibly steady picture."
-          intro="Pull the SkyScreen apart and every component earns its place — each tuned so the screen reads razor-sharp from the ground."
+          intro="Pull the SkyScreen apart and every component earns its place - each tuned so the screen reads razor-sharp from the ground."
         />
       </div>
 
       <div className="relative mt-12 grid lg:grid-cols-2">
-        {/* single responsive 3D viewer — inline on mobile, sticky on desktop */}
+        {/* single responsive 3D viewer - inline on mobile, sticky on desktop */}
         <div className="relative h-[52vh] lg:sticky lg:top-0 lg:flex lg:h-screen lg:items-center">
           <motion.div
             onViewportEnter={() => setInView(true)}

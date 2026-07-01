@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 /**
  * Bespoke cursor: a soft outer ring that trails with easing and a precise
- * inner dot that tracks 1:1. Reacts to [data-cursor] targets — growing into a
+ * inner dot that tracks 1:1. Reacts to [data-cursor] targets - growing into a
  * focus ring and optionally surfacing a label from data-cursor-label.
  * Disabled entirely on touch / coarse pointers.
  */

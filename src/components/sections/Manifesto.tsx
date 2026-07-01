@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "motion/react";
 
 const TEXT =
-  "For a century, advertising has been bolted to walls, roads and rooftops. SkyScreen lifts it off the ground entirely — a living screen that flies, broadcasts and turns the open night into the most unforgettable stage on Earth.";
+  "For a century, advertising has been bolted to walls, roads and rooftops. SkyScreen lifts it off the ground entirely - a living screen that flies, broadcasts and turns the open night into the most unforgettable stage on Earth.";
 
 function Word({
   children,

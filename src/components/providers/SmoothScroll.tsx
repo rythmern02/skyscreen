@@ -11,7 +11,7 @@ if (typeof window !== "undefined") {
 
 /**
  * Drives Lenis from GSAP's RAF ticker so ScrollTrigger and Lenis share a
- * single clock — no jitter, no double-RAF. Exposes the instance on
+ * single clock - no jitter, no double-RAF. Exposes the instance on
  * window.__lenis for imperative anchor scrolling.
  */
 export function SmoothScroll({ children }: { children: React.ReactNode }) {

@@ -21,7 +21,7 @@ export function Process() {
           index="07"
           eyebrow="The Process"
           title="From first call to the moment it lifts."
-          intro="A single, choreographed pipeline. We carry the complexity — aviation, design and deployment — so you only carry the idea."
+          intro="A single, choreographed pipeline. We carry the complexity - aviation, design and deployment - so you only carry the idea."
         />
 
         <div ref={ref} className="relative mt-20">

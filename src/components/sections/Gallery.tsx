@@ -37,7 +37,7 @@ export function Gallery() {
               <div className="relative h-full w-full">
                 <Image
                   src={tile.img}
-                  alt={`${tile.caption} — ${tile.place}`}
+                  alt={`${tile.caption} - ${tile.place}`}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover brightness-[0.72] transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.08] group-hover:brightness-90"
@@ -76,7 +76,7 @@ export function Gallery() {
             >
               <Image
                 src={active.img}
-                alt={`${active.caption} — ${active.place}`}
+                alt={`${active.caption} - ${active.place}`}
                 fill
                 sizes="100vw"
                 className="object-cover"

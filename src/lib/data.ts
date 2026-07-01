@@ -22,14 +22,14 @@ export type Capability = {
 export const CAPABILITIES: Capability[] = [
   { id: "led", title: "Drone LED Screen", tag: "Core", blurb: "A flight-grade emissive display engineered to hang stable in open air and stay readable from the ground." },
   { id: "displays", title: "Large Flying Displays", tag: "Format", blurb: "Modular panels scale from intimate rooftop reveals to stadium-grade canvases hundreds of square meters wide." },
-  { id: "ooh", title: "Outdoor Advertising", tag: "Reach", blurb: "Place your message above traffic, skylines and crowds — impossible to scroll past, impossible to ignore." },
+  { id: "ooh", title: "Outdoor Advertising", tag: "Reach", blurb: "Place your message above traffic, skylines and crowds - impossible to scroll past, impossible to ignore." },
   { id: "live", title: "Live Streaming", tag: "Real-time", blurb: "Pipe a live feed, a remote speaker or a social wall straight to the sky with sub-second latency." },
   { id: "political", title: "Political Campaigns", tag: "Civic", blurb: "Rally-scale visibility that travels between districts in hours, not weeks of poster runs." },
-  { id: "sports", title: "Sports Events", tag: "Energy", blurb: "Aerial replays, score takeovers and sponsor moments that the whole arena — inside and out — can see." },
+  { id: "sports", title: "Sports Events", tag: "Energy", blurb: "Aerial replays, score takeovers and sponsor moments that the whole arena - inside and out - can see." },
   { id: "wedding", title: "Wedding Screens", tag: "Personal", blurb: "Float a couple's story above the celebration for a reveal no guest will ever forget." },
   { id: "concert", title: "Concerts", tag: "Stage", blurb: "Extend the stage into the night sky with synchronized visuals that move with the set." },
   { id: "launch", title: "Brand Launches", tag: "Reveal", blurb: "Drop a product into the skyline at the exact second of reveal for a moment built to go viral." },
-  { id: "gov", title: "Government Campaigns", tag: "Public", blurb: "Public-service messaging with genuine reach — health, safety and awareness, elevated." },
+  { id: "gov", title: "Government Campaigns", tag: "Public", blurb: "Public-service messaging with genuine reach - health, safety and awareness, elevated." },
   { id: "emergency", title: "Emergency Broadcasting", tag: "Critical", blurb: "Rapid-deploy visual alerts and wayfinding above crowds when every second counts." },
 ];
 
@@ -45,13 +45,13 @@ export type ShowcaseItem = {
   img: string;
 };
 
-// Forward-looking use cases — what SkyScreen is built to do (not past work).
+// Forward-looking use cases - what SkyScreen is built to do (not past work).
 export const SHOWCASE: ShowcaseItem[] = [
-  { id: "s1", index: "01", title: "Reveal it where the world looks up", line: "Drop a product into the skyline at the exact second of launch — a moment built to travel.", category: "Brand Launches", spec: "4K", specLabel: "live content", accent: "#6ea8ff", img: "/images/billboard.jpg" },
-  { id: "s2", index: "02", title: "Turn the night sky into the stage", line: "Extend a concert into the air with visuals synced to every beat of the set.", category: "Concerts", spec: "360°", specLabel: "visibility", accent: "#b07bff", img: "/images/ledfest.jpg" },
-  { id: "s3", index: "03", title: "Own the airspace above the arena", line: "Aerial replays, score takeovers and sponsor moments the whole crowd can see.", category: "Sports", spec: "500m+", specLabel: "viewing radius", accent: "#58e0c0", img: "/images/arena.jpg" },
-  { id: "s4", index: "04", title: "A reveal that floats above it all", line: "Lift a couple's story over the celebration for a moment no guest forgets.", category: "Weddings", spec: "Bespoke", specLabel: "every flight", accent: "#ff9d4d", img: "/images/wedding.jpg" },
-  { id: "s5", index: "05", title: "Cover a region in a single evening", line: "Move a message between districts in hours, updated live from the ground.", category: "Campaigns", spec: "Live", specLabel: "content updates", accent: "#6ea8ff", img: "/images/citynight.jpg" },
+  { id: "s1", index: "01", title: "Reveal it where the world looks up", line: "Drop a product into the skyline at the exact second of launch - a moment built to travel.", category: "Brand Launches", spec: "4K", specLabel: "live content", accent: "#6ea8ff", img: "/images/skyscreen_drone_city_1782918636366.jpg" },
+  { id: "s2", index: "02", title: "Turn the night sky into the stage", line: "Extend a concert into the air with visuals synced to every beat of the set.", category: "Concerts", spec: "360°", specLabel: "visibility", accent: "#b07bff", img: "/images/skyscreen_festival_1782918623917.jpg" },
+  { id: "s3", index: "03", title: "Own the airspace above the arena", line: "Aerial replays, score takeovers and sponsor moments the whole crowd can see.", category: "Sports", spec: "500m+", specLabel: "viewing radius", accent: "#58e0c0", img: "/images/skyscreen_festival_1782918623917.jpg" },
+  { id: "s4", index: "04", title: "A reveal that floats above it all", line: "Lift a couple's story over the celebration for a moment no guest forgets.", category: "Weddings", spec: "Bespoke", specLabel: "every flight", accent: "#ff9d4d", img: "/images/skyscreen_wedding_1782918646023.jpg" },
+  { id: "s5", index: "05", title: "Cover a region in a single evening", line: "Move a message between districts in hours, updated live from the ground.", category: "Campaigns", spec: "Live", specLabel: "content updates", accent: "#6ea8ff", img: "/images/skyscreen_drone_city_1782918636366.jpg" },
 ];
 
 export type GalleryItem = {
@@ -66,15 +66,15 @@ export type GalleryItem = {
 // Illustrative imagery of the technology and the contexts it's built for.
 export const GALLERY: GalleryItem[] = [
   { id: "g1", caption: "The LED Display", place: "Up close", accent: "#6ea8ff", img: "/images/ledpanel.jpg", h: 440 },
-  { id: "g2", caption: "Concert-scale", place: "Stage visuals", accent: "#b07bff", img: "/images/ledfest.jpg", h: 300 },
+  { id: "g2", caption: "Concert-scale", place: "Stage visuals", accent: "#b07bff", img: "/images/skyscreen_festival_1782918623917.jpg", h: 300 },
   { id: "g3", caption: "Aerial Platform", place: "The drone rig", accent: "#58e0c0", img: "/images/drone-dark.jpg", h: 360 },
-  { id: "g4", caption: "Outdoor Advertising", place: "City-scale", accent: "#ff9d4d", img: "/images/billboard.jpg", h: 320 },
+  { id: "g4", caption: "Outdoor Advertising", place: "City-scale", accent: "#ff9d4d", img: "/images/skyscreen_drone_city_1782918636366.jpg", h: 320 },
   { id: "g5", caption: "Stadium Energy", place: "Live crowds", accent: "#6ea8ff", img: "/images/arena2.jpg", h: 460 },
   { id: "g6", caption: "In The Clouds", place: "At altitude", accent: "#58e0c0", img: "/images/drone-clouds.jpg", h: 320 },
-  { id: "g7", caption: "Celebrations", place: "Personal moments", accent: "#ff9d4d", img: "/images/wedding2.jpg", h: 360 },
-  { id: "g8", caption: "Massive Displays", place: "Stage build", accent: "#b07bff", img: "/images/ledstage.jpg", h: 300 },
+  { id: "g7", caption: "Celebrations", place: "Personal moments", accent: "#ff9d4d", img: "/images/skyscreen_wedding_1782918646023.jpg", h: 360 },
+  { id: "g8", caption: "Massive Displays", place: "Stage build", accent: "#b07bff", img: "/images/skyscreen_festival_1782918623917.jpg", h: 300 },
   { id: "g9", caption: "Brand Launches", place: "Reveal moment", accent: "#6ea8ff", img: "/images/auto.jpg", h: 340 },
-  { id: "g10", caption: "Built To Fly", place: "Sky-ready", accent: "#58e0c0", img: "/images/drone-sky.jpg", h: 380 },
+  { id: "g10", caption: "Built To Fly", place: "Sky-ready", accent: "#58e0c0", img: "/images/skyscreen_drone_city_1782918636366.jpg", h: 380 },
 ];
 
 export type TechPart = {
@@ -156,8 +156,8 @@ export type Faq = { q: string; a: string };
 
 export const FAQS: Faq[] = [
   { q: "How large can the flying screen be?", a: "Our modular panels scale from compact rooftop formats to stadium-grade canvases hundreds of square meters in area. We size the rig to your venue, airspace clearance and the viewing distance you need to dominate." },
-  { q: "Is it safe to fly over crowds and events?", a: "Safety is engineered into every layer — redundant motors, per-rotor failover, geofenced flight envelopes and certified pilots. We secure full aviation clearance and operate strictly within approved safety corridors for every deployment." },
-  { q: "Can it display a live feed in real time?", a: "Yes. An encrypted low-latency uplink streams live video, remote speakers, social walls or broadcast feeds to the screen with sub-second latency — and content can be swapped instantly mid-flight." },
+  { q: "Is it safe to fly over crowds and events?", a: "Safety is engineered into every layer - redundant motors, per-rotor failover, geofenced flight envelopes and certified pilots. We secure full aviation clearance and operate strictly within approved safety corridors for every deployment." },
+  { q: "Can it display a live feed in real time?", a: "Yes. An encrypted low-latency uplink streams live video, remote speakers, social walls or broadcast feeds to the screen with sub-second latency - and content can be swapped instantly mid-flight." },
   { q: "How visible is it from the ground?", a: "The display uses high-nit, weather-sealed LED modules tuned for daylight legibility and deep night contrast, with a practical viewing radius beyond five hundred meters and a full 360° line of sight." },
   { q: "What weather can it operate in?", a: "The system is outdoor-rated and weather-resistant, engineered to hold a stable hover and a flat picture in gusting wind. Final go/no-go is always confirmed against live conditions on the day for safety." },
   { q: "How far in advance should we book?", a: "Lead time depends on airspace and scale, but most campaigns are best secured several weeks out to allow for permissions and content design. Rapid-deploy options are available for time-critical and emergency use." },

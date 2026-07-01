@@ -43,9 +43,26 @@ export function Contact() {
   const [purpose, setPurpose] = useState("");
   const [openSelect, setOpenSelect] = useState(false);
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "63e8f306-f116-407d-87ce-1b547e20c27d");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        console.error("Form submission error:", data);
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
+    }
   };
 
   return (
@@ -100,8 +117,8 @@ export function Contact() {
                   >
                     <Field label="Name" name="name" required placeholder="Your full name" />
                     <Field label="Company" name="company" placeholder="Organisation" />
-                    <Field label="Email" name="email" type="email" required placeholder="you@company.com" />
-                    <Field label="Phone" name="phone" type="tel" placeholder="+1 000 000 0000" />
+                    <Field label="Email" name="email" type="email" required placeholder="rajeevkalra1000@gmail.com" />
+                    <Field label="Phone" name="phone" type="tel" placeholder="6261076025" />
                     <Field label="City" name="city" placeholder="Where it flies" />
                     <Field label="Event Date" name="date" type="date" />
                     <Field label="Budget" name="budget" placeholder="Estimated range" />

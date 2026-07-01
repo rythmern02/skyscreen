@@ -17,7 +17,7 @@ export function Stats() {
           eyebrow="Why SkyScreen"
           title="Engineered to dominate the sky."
           align="center"
-          intro="Every figure below is a capability the platform is built to deliver — the case for putting your message in the air."
+          intro="Every figure below is a capability the platform is built to deliver - the case for putting your message in the air."
         />
 
         <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-line bg-line lg:grid-cols-3">
