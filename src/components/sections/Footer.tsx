@@ -28,13 +28,13 @@ export function Footer() {
             6261076025
           </a>
           <a 
-            href="https://instagram.com" 
+            href="https://instagram.com/sky_screen_26" 
             target="_blank" 
             rel="noreferrer" 
             data-cursor 
             className="rounded-full border border-white/10 px-6 py-2.5 transition-colors hover:bg-white hover:text-black"
           >
-            Instagram
+            @sky_screen_26
           </a>
         </div>
       </div>

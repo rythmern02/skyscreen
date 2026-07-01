@@ -149,7 +149,7 @@ export const PROCESS: ProcessStep[] = [
   { no: "04", title: "Permissions", detail: "We handle aviation clearance, NOTAMs and local approvals end to end." },
   { no: "05", title: "Deployment", detail: "Crews stage on site; the mesh calibrates and rehearses the full show." },
   { no: "06", title: "Launch", detail: "The screen lifts. Your moment takes the sky, live and synchronized." },
-  { no: "07", title: "Delivery", detail: "Capture, analytics and broadcast-grade footage delivered to your team." },
+
 ];
 
 export type Faq = { q: string; a: string };

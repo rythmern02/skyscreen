@@ -76,7 +76,7 @@ const jsonLd = {
     "Drone-suspended flying LED screen advertising for brands, events, concerts and campaigns.",
   slogan: "Advertising Has Left The Ground.",
   sameAs: [
-    "https://www.instagram.com/skyscreen",
+    "https://www.instagram.com/sky_screen_26",
     "https://www.linkedin.com/company/skyscreen",
     "https://www.youtube.com/@skyscreen",
   ],
@@ -96,12 +96,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${sora.variable}`} suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "(function(){try{var p=new URLSearchParams(location.search).get('theme');var t=p||localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.add('light');}if(p){localStorage.setItem('theme',p);}}catch(e){}})();",
-          }}
-        />
       </head>
       <body className="grain bg-void text-fg antialiased">
         <script

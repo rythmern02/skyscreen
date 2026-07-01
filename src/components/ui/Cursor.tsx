@@ -66,19 +66,17 @@ export function Cursor() {
     <div aria-hidden className="pointer-events-none fixed inset-0 z-[70]">
       <div
         ref={ring}
-        className="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-white/40 backdrop-invert-0 transition-[width,height] duration-300 will-change-transform"
-        style={{ mixBlendMode: "difference" }}
+        className="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border border-fg/40 transition-[width,height] duration-300 will-change-transform"
       >
         {label ? (
-          <span className="select-none text-[8px] font-medium uppercase tracking-[0.2em] text-white">
+          <span className="select-none text-[8px] font-medium uppercase tracking-[0.2em] text-fg">
             {label}
           </span>
         ) : null}
       </div>
       <div
         ref={dot}
-        className="absolute left-0 top-0 h-1.5 w-1.5 rounded-full bg-white will-change-transform"
-        style={{ mixBlendMode: "difference" }}
+        className="absolute left-0 top-0 h-1.5 w-1.5 rounded-full bg-fg will-change-transform"
       />
     </div>
   );
