@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "motion/react";
 import { NAV_LINKS } from "@/lib/data";
 import { MagneticButton } from "./MagneticButton";
 import { Logo } from "./Logo";
-import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -81,7 +80,6 @@ export function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <ThemeToggle />
             <MagneticButton href="#contact" variant="primary" className="px-6 py-3 text-[13px]">
               Book Now
             </MagneticButton>
@@ -89,7 +87,6 @@ export function Navbar() {
 
           {/* Mobile cluster */}
           <div className="relative z-10 flex items-center gap-2 lg:hidden">
-            <ThemeToggle />
             <button
               data-cursor
               aria-label="Toggle menu"

@@ -20,14 +20,14 @@ export function Stats() {
           intro="Every figure below is a capability the platform is built to deliver - the case for putting your message in the air."
         />
 
-        <div className="mt-20 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-line bg-line lg:grid-cols-3">
+        <div className="mt-20 grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {STATS.map((s, i) => (
             <Reveal
               key={i}
               delay={(i % 3) * 0.08}
               className="group relative bg-ink/80 p-8 transition-colors duration-500 hover:bg-coal sm:p-10"
             >
-              <div className="flex items-baseline font-display text-5xl tracking-tight text-fg sm:text-6xl">
+              <div className="flex items-baseline font-display text-4xl tracking-tight text-fg sm:text-5xl lg:text-6xl">
                 {s.prefix ? <span>{s.prefix}</span> : null}
                 <CountUp value={s.value} decimals={s.decimals ?? 0} />
                 <span className="text-sky-glow">{s.suffix}</span>
